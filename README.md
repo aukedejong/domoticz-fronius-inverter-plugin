@@ -1,4 +1,4 @@
-# domoticz-fronius-interter-plugin
+# domoticz-fronius-inverter-plugin
 Domoticz Fronius Inverter plugin
 
 This plugin is not yet ready for use!
