@@ -27,6 +27,7 @@ import urllib.error
 class BasePlugin:
     inverterWorking = True
     intervalCounter = None
+    heartbeat = 30
     previousTotalWh = 0
     previousCurrentWatt = 0
     whFraction = 0
@@ -40,7 +41,7 @@ class BasePlugin:
             Domoticz.Device(Name="Total power",  Unit=2, TypeName="kWh", Used=1).Create()
             logDebugMessage("Devices created.")
 
-        Domoticz.Heartbeat(30)
+        Domoticz.Heartbeat(self.heartbeat)
         self.intervalCounter = 0
 
         if ('FroniusInverter' not in Images): Domoticz.Image('Fronius Inverter Icons.zip').Create()
