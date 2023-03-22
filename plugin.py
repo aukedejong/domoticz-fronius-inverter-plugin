@@ -88,7 +88,7 @@ class BasePlugin:
 
     def getInverterRealtimeData(self, ipAddress, deviceId):
 
-        url = "http://" + ipAddress + "/solar_api/v1/GetInverterRealtimeData.cgi?Scope=Device&DeviceID=" + deviceId + "&DataCollection=CommonInverterData"
+        url = "http://" + ipAddress + "/solar_api/v1/GetInverterRealtimeData.cgi?Scope=Device&DeviceId=" + deviceId + "&DataCollection=CommonInverterData"
         logDebugMessage('Retrieve solar data from ' + url)
 
         try:
